@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nantana Monkata - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        body { 
+            font-family: 'Kanit', sans-serif; 
+            color: #2D3436; 
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            position: relative;
+            /* 1. ใส่รูปพื้นหลังที่นี่ */
+            background-image: url('photo9.jpg'); /* เปลี่ยนเป็นชื่อไฟล์รูปของคุณ */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* 2. สร้าง Layer สีขาวทับรูปพื้นหลัง */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.85); /* ปรับความจางที่ 0.85 (0 คือโปร่งใส 1 คือขาวทึบ) */
+            z-index: -1; /* ให้อยู่ข้างหลังเนื้อหา */
+        }
+        
+        @keyframes cf3FadeInOut {
+            0% { opacity: 1; }
+            45% { opacity: 1; }
+            55% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        .crossfade-img {
+            animation: cf3FadeInOut 3s ease-in-out infinite alternate;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-wrapper { flex-direction: column; align-items: flex-start !important; gap: 50px; padding-left: 20px; }
+            .main-line { width: 4px !important; height: 100% !important; left: 28px !important; top: 0 !important; transform: none !important; }
+            .timeline-item { flex-direction: row !important; width: 100%; justify-content: flex-start !important; text-align: left !important; gap: 20px; }
+            .info-card { position: static !important; transform: none !important; text-align: left !important; margin: 0 !important; width: 100% !important; }
+            .icon-circle { z-index: 20; flex-shrink: 0; }
+            .connector-branch { display: none; }
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12 lg:p-20">
+
+    <div class="bg-overlay"></div>
+
+    <div class="fixed top-4 left-4 md:top-8 md:left-8 z-50">
+        <a href="index.html" class="flex items-center gap-2 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-gray-200 text-blue-600 rounded-full shadow-lg hover:shadow-xl transition duration-300">
+            <span class="material-symbols-outlined text-xl">home</span>
+            <span class="font-bold text-sm">หน้าหลัก</span>
+        </a>
+    </div>
+
+    <main class="max-w-6xl mx-auto relative z-10">
+        
+        <section class="mt-16 mb-32 md:mb-56 relative">
+            <h2 class="text-center text-2xl font-bold text-gray-400 mb-16 uppercase tracking-widest md:hidden">Education</h2>
+            
+            <div class="relative">
+                <div class="main-line absolute top-[28px] left-0 w-full h-[4px] bg-gray-200/50 z-0 rounded-full"></div>
+                
+                <div class="timeline-wrapper flex justify-between items-start relative z-10">
+                    <div class="timeline-item flex flex-col items-center flex-1 relative">
+                        <div class="icon-circle w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-4 border-white shadow-lg flex items-center justify-center text-white transition hover:scale-110">
+                            <span class="material-symbols-outlined text-2xl">child_care</span>
+                        </div>
+                        <div class="info-card text-center md:absolute md:top-16 w-full">
+                            <p class="font-bold text-gray-800 text-sm uppercase tracking-wider leading-tight">Junior High School<br>Nakaesamakkiwittaya School</p>
+                            <p class="md:hidden text-blue-600 font-bold text-xs mt-1">Grad: 2014 | GPA: 3.72</p>
+                            <div class="connector-branch mt-2 flex flex-col items-center hidden md:flex">
+                                <div class="h-8 w-[2px] bg-blue-200"></div>
+                                <div class="bg-white/90 backdrop-blur-sm px-3 py-2 rounded-xl shadow-md border border-blue-50 mt-1 min-w-[120px]">
+                                    <p class="text-bg text-blue-600 font-bold">Grad: 2014</p>
+                                    <p class="text-bg text-gray-500 font-medium">GPA: 3.72/4.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item flex flex-col items-center flex-1 relative">
+                        <div class="icon-circle w-14 h-14 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-4 border-white shadow-lg flex items-center justify-center text-white transition hover:scale-110">
+                            <span class="material-symbols-outlined text-2xl">school</span>
+                        </div>
+                        <div class="info-card text-center md:absolute md:top-16 w-full">
+                            <p class="font-bold text-gray-800 text-sm uppercase tracking-wider leading-tight">High School<br>Nakaesamakkiwittaya School</p>
+                            <p class="md:hidden text-purple-600 font-bold text-xs mt-1">Grad: 2017 | GPA: 3.87</p>
+                            <div class="connector-branch mt-2 flex flex-col items-center hidden md:flex">
+                                <div class="h-8 w-[2px] bg-purple-200"></div>
+                                <div class="bg-white/90 backdrop-blur-sm px-3 py-2 rounded-xl shadow-md border border-purple-50 mt-1 min-w-[120px]">
+                                    <p class="text-bg text-purple-600 font-bold">Grad: 2017</p>
+                                    <p class="text-bg text-gray-500 font-medium">GPA: 3.87/4.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item flex flex-col items-center flex-1 relative">
+                        <div class="icon-circle w-14 h-14 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 border-4 border-white shadow-lg flex items-center justify-center text-white transition hover:scale-110">
+                            <span class="material-symbols-outlined text-2xl">history_edu</span>
+                        </div>
+                        <div class="info-card text-center md:absolute md:top-16 w-full">
+                            <p class="font-bold text-gray-800 text-sm uppercase tracking-wider leading-tight">B.Sc. in Physics<br>Khon Kaen University</p>
+                            <p class="md:hidden text-orange-600 font-bold text-xs mt-1">Grad: 2022 | GPA: 3.68</p>
+                            <div class="connector-branch mt-2 flex flex-col items-center hidden md:flex">
+                                <div class="h-8 w-[2px] bg-orange-200"></div>
+                                <div class="bg-white/90 backdrop-blur-sm px-3 py-2 rounded-xl shadow-md border border-orange-50 mt-1 min-w-[120px]">
+                                    <p class="text-bg text-orange-600 font-bold">Grad: 2021</p>
+                                    <p class="text-bg text-gray-500 font-medium">GPA: 3.68/4.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item flex flex-col items-center flex-1 relative">
+                        <div class="icon-circle w-14 h-14 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 border-4 border-white shadow-lg flex items-center justify-center text-white transition hover:scale-110">
+                            <span class="material-symbols-outlined text-2xl">workspace_premium</span>
+                        </div>
+                        <div class="info-card text-center md:absolute md:top-16 w-full">
+                            <p class="font-bold text-gray-800 text-sm uppercase tracking-wider leading-tight">M.Sc. in Physics<br>Khon Kaen University</p>
+                            <p class="md:hidden text-emerald-600 font-bold text-xs mt-1">Grad: 2025 | GPA: 3.96</p>
+                            <div class="connector-branch mt-2 flex flex-col items-center hidden md:flex">
+                                <div class="h-8 w-[2px] bg-emerald-200"></div>
+                                <div class="bg-white/90 backdrop-blur-sm px-3 py-2 rounded-xl shadow-md border border-emerald-50 mt-1 min-w-[120px]">
+                                    <p class="text-bg text-emerald-600 font-bold">Grad: 2025</p>
+                                    <p class="text-bg text-gray-500 font-medium">GPA: 3.96/4.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center lg:items-start pt-12">
+            <div class="w-full lg:w-7/12 order-2 lg:order-1">
+                <h3 class="text-2xl font-bold text-gray-700 mb-0 flex items-center border-b pb-4">
+                    <span class="material-symbols-outlined mr-3 text-blue-600">military_tech</span>Academic Scholarships
+                </h3>
+                <div class="space-y-1">
+                    <div class="flex items-start">
+                        <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2.5 mr-4 flex-shrink-0 shadow-lg"></div>
+                        <div class="flex-1">
+                            <span class="text-black-400 font-semibold text-bg uppercase tracking-widest block mb-1">2018 – 2022</span>
+                            <p class="text-gray-700 leading-relaxed bg-white/40 p-2 rounded-lg">
+                                Scholarship: <span class="text-blue-600 font-bold">DPST Scholarship</span> (Bachelor's Degree) <span class="bg-blue-50 text-blue-600 px-2 py-0.5 rounded text-bg font-bold inline-block ml-1">1st Class Honors</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2.5 h-2.5 rounded-full bg-purple-500 mt-2.5 mr-4 flex-shrink-0 shadow-lg"></div>
+                        <div class="flex-1">
+                            <span class="text-black-400 font-semibold text-bg uppercase tracking-widest block mb-1">2022 – 2025</span>
+                            <p class="text-gray-700 leading-relaxed bg-white/40 p-2 rounded-lg">
+                                Continued: <span class="text-purple-600 font-bold">DPST Graduate Scholarship</span> (Master's Degree)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-5/12 order-1 lg:order-2 flex flex-col items-center lg:items-end w-full lg:-mt-20">
+                <div class="w-64 h-64 md:w-72 md:h-72 bg-white rounded-[2.5rem] mb-8 shadow-2xl border-[12px] border-white -rotate-3 transition-all duration-700 relative overflow-hidden group">
+                    <img src="Photo2.jpg" alt="Nantana 1" class="absolute inset-0 w-full h-full object-cover rounded-[2rem]">
+                    <img src="Photo4.jpg" alt="Nantana 2" class="absolute inset-0 w-full h-full object-cover rounded-[2rem] crossfade-img">
+                </div>
+                <div class="text-center lg:text-right px-4">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-2 tracking-tight text-gray-800">Hello!</h1>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-5 text-blue-600">I'm Apple.</h2>
+                    <p class="text-lg text-gray-600 max-w-sm mx-auto lg:max-w-none leading-relaxed bg-white/30 p-2 rounded-lg inline-block">
+                        Postgraduate student at <span class="font-bold text-gray-800 underline decoration-blue-400">Khon Kaen University</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

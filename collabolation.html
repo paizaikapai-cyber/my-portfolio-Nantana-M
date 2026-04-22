@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Collaborators - Nantana Monkata</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        body { font-family: 'Kanit', sans-serif; background-color: #FBFDFF; }
+        .sidebar-gradient { background: linear-gradient(180deg, #3498DB 0%, #2980B9 100%); }
+        
+        .person-card {
+            background: white;
+            border-radius: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #EDF2F7;
+        }
+        .person-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+            border-color: #3498DB;
+        }
+        
+        .profile-img-container {
+            width: 130px;
+            height: 130px;
+            margin: -65px auto 15px;
+            position: relative;
+        }
+
+        .main-content { transition: margin-left 0.4s ease; }
+        @media (min-width: 1024px) { .main-content { margin-left: 288px; } }
+        
+        .fade-in { animation: fadeIn 0.8s ease-in forwards; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="min-h-screen">
+
+<aside class="w-full lg:w-72 sidebar-gradient text-white flex flex-col lg:fixed h-auto lg:h-full shadow-2xl z-50">
+    <div class="p-8 text-center">
+        <div class="w-24 h-24 lg:w-32 lg:h-32 bg-white rounded-full mx-auto mb-4 border-4 border-blue-200 overflow-hidden shadow-xl">
+            <img src="profile.jpg" alt="Nantana" class="w-full h-full object-cover">
+        </div>
+        <h2 class="text-xl font-semibold">Nantana Monkata</h2>
+        <p class="text-blue-100 text-xs mt-2 uppercase tracking-widest opacity-80 italic">Academic Network</p>
+    </div>
+    <nav class="flex lg:flex-col flex-row justify-center lg:justify-start px-6 space-y-2 pb-8">
+        <a href="index.html" class="flex items-center gap-3 py-3 px-5 rounded-2xl hover:bg-white/10 transition w-full">
+            <span class="material-symbols-outlined">home</span> Home
+        </a>
+        <a href="collabolation.html" class="flex items-center gap-3 py-3 px-5 rounded-2xl bg-white/20 shadow-inner w-full">
+            <span class="material-symbols-outlined">groups</span> Collaboration
+        </a>
+    </nav>
+</aside>
+
+<main class="main-content p-6 lg:p-16">
+    
+    <header class="max-w-6xl mx-auto mb-16 fade-in">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold mb-4 tracking-widest">
+            <span class="material-symbols-outlined text-sm">hub</span> RESEARCH COMMUNITY
+        </div>
+        <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 mb-6">
+            Meet My <span class="text-blue-600">Collaborators</span>
+        </h1>
+        <p class="text-gray-500 text-lg max-w-2xl leading-relaxed">
+I am truly honored and grateful for the opportunity to work alongside such distinguished researchers and colleagues. Our shared passion and collaboration are what drive innovation in the field of Physics.        </p>
+    </header>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-10">
+        
+        <div class="person-card p-8 text-center pt-16">
+            <div class="profile-img-container">
+                <img src="adv1.jpg" alt="Person" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl">
+                <div class="absolute bottom-1 right-1 bg-blue-600 text-white p-1 rounded-full border-2 border-white flex">
+                    <span class="material-symbols-outlined text-[16px]">workspace_premium</span>
+                </div>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800">Assoc. Prof. Daris Samart</h3>
+            <p class="text-blue-600 font-semibold text-xs uppercase tracking-wider">Master Thesis Supervisor</p>
+            <p class="text-gray-500 text-sm mt-3 px-4 italic">
+Associate Professor in Physics, Department of Physics, Faculty of Science, Khon Kaen University</p>
+            <div class="mt-6 flex justify-center gap-3">
+ 
+
+    <a href="https://scholar.google.com/citations?user=qbCyfq4AAAAJ&hl=en" 
+       target="_blank"
+       class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-blue-500 transition">
+        <span class="material-symbols-outlined text-lg">link</span>
+    </a>
+</div>
+        </div>
+
+        <div class="person-card p-8 text-center pt-16">
+            <div class="profile-img-container">
+                <img src="adv2.jpg" alt="Person" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl">
+            </div>
+            <h3 class="font-bold text-xl text-gray-800">Dr. Ahmad Jafar Arifi</h3>
+            <p class="text-purple-600 font-semibold text-xs uppercase tracking-wider">Research Collaborator</p>
+            <p class="text-gray-500 text-sm mt-3 px-4 italic">Junior Researcher in Advanced Science Research Center, JAEA, Japan</p>
+  <div class="mt-6 flex justify-center gap-3">
+  <a href="https://scholar.google.com/citations?user=ZqwFV00AAAAJ&hl=en" 
+       target="_blank"
+       class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-blue-500 transition">
+        <span class="material-symbols-outlined text-lg">link</span>
+    </a>
+
+        </div>
+ </div>
+
+     
+
+<div class="person-card p-8 text-center pt-16">
+    <div class="profile-img-container">
+        <img src="adv3.jpg" alt="Person" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl">
+    </div>
+    
+    <h3 class="font-bold text-xl text-gray-800">Asst. Prof. Siritorn Buranurak</h3>
+    
+    <p class="text-orange-500 font-semibold text-xs uppercase tracking-wider">Undergraduate Supervisor</p>
+    
+    <p class="text-gray-500 text-sm mt-3 px-4 italic">Assistant Professor in Physics, Department of Physics, Faculty of Science, Khon Kaen University</p>
+    
+    <div class="mt-6 flex justify-center gap-3">
+        <a href="https://scholar.google.com/citations?user=Gw3rvuAAAAAJ&hl=en" 
+           target="_blank"
+           class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-blue-500 transition">
+            <span class="material-symbols-outlined text-lg">link</span>
+        </a>
+    </div>
+</div>
+
+
+        <div class="person-card p-8 text-center pt-16">
+            <div class="profile-img-container">
+                <img src="adv4.jpg" alt="Person" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl">
+            </div>
+            <h3 class="font-bold text-xl text-gray-800">Prin Sawasdipol</h3>
+            <p class="text-emerald-600 font-semibold text-xs uppercase tracking-wider">Research Collaborator</p>
+            <p class="text-gray-500 text-sm mt-3 px-4 italic">Ph.D. student, , Khon Kaen University</p>
+            
+        </div>
+
+        <div class="person-card p-8 text-center pt-16">
+            <div class="profile-img-container">
+                <img src="adv5.jpg" alt="Person" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl">
+            </div>
+            <h3 class="font-bold text-xl text-gray-800">Nongnapat Ponkhuha</h3>
+            <p class="text-blue-500 font-semibold text-xs uppercase tracking-wider">Research Collaborator</p>
+            <p class="text-gray-500 text-sm mt-3 px-4 italic">Ph.D. student, Khon Kaen University</p>
+            
+        </div>
+
+        <div class="person-card p-8 text-center pt-16">
+            <div class="profile-img-container">
+                <img src="adv6.jpg" alt="Person" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl">
+            </div>
+            <h3 class="font-bold text-xl text-gray-800">Ratirat Suntharawirat</h3>
+            <p class="text-pink-500 font-semibold text-xs uppercase tracking-wider">Research Collaborator</p>
+            <p class="text-gray-500 text-sm mt-3 px-4 italic">Ph.D. student, Khon Kaen University</p>
+            
+        </div>
+ภ
+
+    </div>
+
+    <footer class="max-w-6xl mx-auto mt-40 text-center pb-20">
+        <p class="text-gray-300 font-light tracking-[0.2em] text-xs uppercase">Science is built through global cooperation</p>
+    </footer>
+
+</main>
+
+</body>
+</html>
